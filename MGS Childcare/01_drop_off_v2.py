@@ -3,10 +3,13 @@ def dropOff(roll):
     last_item = len(roll)
     second_to_last = last_item - 1
     child_name = roll[second_to_last:last_item]
+    print()
     print("Your child: ")
     print("".join(child_name))
     print("has been added to the roll")
+    print()
     return roll
+
 
 
 child_list = []
