@@ -12,7 +12,3 @@ def pickUp(roll):
             print("is ready for pickup!")
             sys.exit()
 
-
-child_list = ["John", "Jimmy", "Maxwell Francis Longshoremen"]
-
-pickUp(child_list)
