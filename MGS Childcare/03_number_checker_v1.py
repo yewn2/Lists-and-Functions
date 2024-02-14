@@ -1,4 +1,4 @@
-def integer_checker(question):
+def number_checker(question):
     error = "\nSorry, you must enter an integer\n"
     number = ""
     while not number:
