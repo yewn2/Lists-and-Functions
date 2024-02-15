@@ -58,7 +58,7 @@ def pickUp(roll):
         else:
             print(f"Your child {name} is not present; please try again.\n")
             break
-
+            
 
 def calcCost():
     ...
