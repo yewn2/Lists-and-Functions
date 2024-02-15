@@ -1,6 +1,3 @@
-import sys
-
-
 def menu():
     choice = 0
     child_list = []
@@ -21,9 +18,9 @@ def menu():
         choice = number_checker("Enter your choice (number between 1 and 5): ")
         print()
         if choice == 1:
-            dropOff(child_list)
+            child_list = dropOff(child_list)
         elif choice == 2:
-            pickUp()
+            pickUp(child_list)
         elif choice == 3:
             calcCost()
         elif choice == 4:
@@ -45,8 +42,22 @@ def dropOff(roll):
     return roll
 
 
-def pickUp():
-    ...
+def pickUp(roll):
+    name = str(input("What child would you like to pick up? "))
+    number_names = len(roll)
+    one_before = number_names - 1
+    for i in roll:
+        while name not in roll[one_before:number_names]:
+            number_names -= 1
+            one_before -= 1
+            if number_names == 0:
+                break
+        if name in roll[one_before:number_names]:
+            print(f"\nYour child {name} is ready for pickup!\n")
+            break
+        else:
+            print(f"Your child {name} is not present; please try again.\n")
+            break
 
 
 def calcCost():
