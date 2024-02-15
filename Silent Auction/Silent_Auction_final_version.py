@@ -1,7 +1,5 @@
 """
-Silent Auction version 4
-This is the fourth version of the base component
-New function auction added
+Silent Auction final version
 """
 
 
@@ -9,7 +7,7 @@ def main():
     auction_item = input("What is the auction for? ")
     reserve_price = number_checker("What is the reserve price? ")
     print(formatter("=", f"\nThe auction for the {auction_item} "
-                         f"has started!\n"))
+                         f"has started!\nEnter '-1' to end the auction"))
     auction(reserve_price, auction_item)
 
 
