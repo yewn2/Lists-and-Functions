@@ -15,7 +15,7 @@ def main():
     print(f"The average cost of all trips was ${avg_cost:.2f}")
 
 
-def trip(name):
+def trip():
     ...
 
 
