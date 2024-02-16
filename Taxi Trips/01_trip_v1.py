@@ -7,9 +7,7 @@ def trip():
     new_trip = True
     trips_taken = 0
     all_time = 0
-    average_time = 0
     all_income = 0
-    average_cost = 0
     while new_trip:
         trips_taken += 1
         time_taken = float(input("How many minutes did the trip take? "))
