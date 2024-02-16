@@ -28,7 +28,7 @@ def trip():
         all_time += time_taken
         all_income += cost
         print()
-        if input("Do you want to enter a new trip? Yes or No: "):
+        if input("Do you want to enter a new trip? Yes or No: ") == "Yes":
             new_trip = True
         else:
             new_trip = False
