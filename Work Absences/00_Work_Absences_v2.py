@@ -1,18 +1,18 @@
 """
 Work Absences version 2
 This is the second version of the base component
-Staff absence list creator function added
+Statement Formatter function, Integer Checker function and
+Staff Absence list creator function added
 """
 
 
 def main():
-    staff_list = []
-    days_absent = []
-    staff_list, days_absent = staff_absence(staff_list, days_absent)
-    avg = average_absence(staff_list, days_absent)
-    highest, high_amt = most_absence(staff_list, days_absent)
-    none = no_absence(staff_list, days_absent)
-    above_avg = absence_high_avg(staff_list, days_absent, avg)
+    staff_list_absent = []
+    staff_list_absent = staff_absence(staff_list_absent)
+    avg = average_absence(staff_list_absent)
+    highest, high_amt = most_absence(staff_list_absent)
+    none = no_absence(staff_list_absent)
+    above_avg = absence_high_avg(staff_list_absent, avg)
     statement_formatter("-", f"Average number of days staff were absent: "
                              f"{avg:.2f}")
     statement_formatter("=", f"Person with most days absent: "
@@ -27,36 +27,50 @@ def main():
     print("="*30)
 
 
-def staff_absence(lst, amount):
-    staff, days = input("\nEnter the staff name and the number of days "
-                        "absent, separated by a comma and space.\n"
-                        "Enter the staff name as '$' and the days "
-                        "as '0' to finish. ").split(", ")
-    while staff != "$":
-        lst.append(staff)
-        amount.append(days)
-        staff, days = input("\nEnter the staff name and the number of days "
-                            "absent, separated by a comma and space.\n"
-                            "Enter the staff name as '$' and the days "
-                            "as '0' to finish. ").split(", ")
-    return lst, amount
+def statement_formatter(symbol, text):
+    sides = symbol * 3
+    formatted_text = f"{sides} {text} {sides}"
+    top_bottom = symbol * len(formatted_text)
+    return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
 
 
-def average_absence(lst, amount):
+def integer_checker(question):
+    error = "\nSorry, you must enter an integer\n"
+    number = ""
+    while not number:
+        try:
+            number = int(input(question))
+            return number
+        except ValueError:
+            print(error)
+
+
+def staff_absence(lst):
+    print("Input the Staff Name as '$' to stop.")
+    ele = [input("Staff Name: "), integer_checker("Days Absent: ")]
+    while "".join(ele[0:1]) != "$":
+        for i in range(0, 2):
+            lst.append(ele)
+            print()
+            ele = [input("Staff Name: "), integer_checker("Days Absent: ")]
+    return lst
+
+
+def average_absence(lst):
     ...
 
 
-def most_absence(lst, amount):
+def most_absence(lst):
     ...
 
 
-def no_absence(lst, amount):
+def no_absence(lst):
     ...
 
 
-def absence_high_avg(lst, amount):
+def absence_high_avg(lst):
     ...
 
 
-def statement_formatter(symbol, statement):
-    ...
+# main program
+main()
