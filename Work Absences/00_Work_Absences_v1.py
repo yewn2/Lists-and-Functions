@@ -6,13 +6,12 @@ No functions except main are written yet
 
 
 def main():
-    staff_list = []
-    days_absent = []
-    staff_list, days_absent = staff_absence(staff_list, days_absent)
-    avg = average_absence(staff_list, days_absent)
-    highest, high_amt = most_absence(staff_list, days_absent)
-    none = no_absence(staff_list, days_absent)
-    above_avg = absence_high_avg(staff_list, days_absent, avg)
+    staff_list_absent = []
+    staff_list_absent = staff_absence(staff_list_absent)
+    avg = average_absence(staff_list_absent)
+    highest, high_amt = most_absence(staff_list_absent)
+    none = no_absence(staff_list_absent)
+    above_avg = absence_high_avg(staff_list_absent, avg)
     statement_formatter("-", f"Average number of days staff were absent: "
                              f"{avg:.2f}")
     statement_formatter("=", f"Person with most days absent: "
@@ -31,23 +30,27 @@ def statement_formatter(symbol, statement):
     ...
 
 
-def staff_absence(lst, amount):
+def integer_checker(question):
     ...
 
 
-def average_absence(lst, amount):
+def staff_absence(lst):
     ...
 
 
-def most_absence(lst, amount):
+def average_absence(lst):
     ...
 
 
-def no_absence(lst, amount):
+def most_absence(lst):
     ...
 
 
-def absence_high_avg(lst, amount):
+def no_absence(lst):
+    ...
+
+
+def absence_high_avg(lst):
     ...
 
 
