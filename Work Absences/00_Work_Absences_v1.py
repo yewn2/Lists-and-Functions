@@ -27,6 +27,10 @@ def main():
     print("="*30)
 
 
+def statement_formatter(symbol, statement):
+    ...
+
+
 def staff_absence(lst, amount):
     ...
 
@@ -47,5 +51,5 @@ def absence_high_avg(lst, amount):
     ...
 
 
-def statement_formatter(symbol, statement):
-    ...
+# main program
+main()
