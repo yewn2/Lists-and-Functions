@@ -29,6 +29,7 @@ def book(lst):
     taken = []
     seats = int_checker("Please enter the number of seats required "
                         "(Type -1 to quit): ")
+    print()
     while seats >= 0:
         print("VEHICLE NUMBER - TYPE - NO. SEATS")
         for cars in lst:
