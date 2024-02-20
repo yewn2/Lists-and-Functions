@@ -1,5 +1,5 @@
 """
-Base component version 1
+Base component version 2
 Integer checker function added
 """
 
