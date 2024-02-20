@@ -16,7 +16,7 @@ def speeder(lst):
     print("Input the name of speeder as 'x' to stop.")
     print("# " * 13)
     ele = [input("Enter name of speeder: "),
-           int(input("Enter the amount over speed limit: "))]
+           num_checker("Enter the amount over speed limit: ")]
     while "".join(ele[0:1]) != "x":
         if ele[1] < 10:
             fine = 30
@@ -43,7 +43,7 @@ def speeder(lst):
         print()
         print("# " * 13)
         ele = [input("Enter name of speeder: "),
-               int(input("Enter the amount over speed limit: "))]
+               num_checker("Enter the amount over speed limit: ")]
     return lst
 
 
