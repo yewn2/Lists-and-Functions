@@ -10,10 +10,8 @@ def main():
                 [5, "Mitsubishi Airtrek", 4], [6, "Nissan DC Ute", 4],
                 [7, "Toyota Previa", 7], [8, "Toyota Hi Ace", 12],
                 [9, "Toyota Hi Ace", 12]]
-    book_again = True
-    while book_again:
-        car_list = book(car_list)
-    end_program(car_list)
+    car_list, booked_cars = book(car_list)
+    end_program(booked_cars)
 
 
 def int_checker(question):
