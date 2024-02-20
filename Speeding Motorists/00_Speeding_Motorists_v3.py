@@ -45,6 +45,9 @@ def speeder(lst):
         total += fine
         ele = [input("Enter name of speeder: "),
                num_checker("Enter the amount over speed limit: ")]
+        if "".join(ele[0:1]) == "x":
+            print("# " * 13)
+            print()
     return lst, total
 
 
