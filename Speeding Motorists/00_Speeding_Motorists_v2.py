@@ -7,12 +7,13 @@ Speeder function component and arrest component added
 
 def main():
     speeds = []
-    speeder(speeds)
-    end_program(speeds)
+    speeds, all_fines = speeder(speeds)
+    end_program(speeds, all_fines)
 
 
 def speeder(lst):
     fine = 0
+    total = 0
     print("Input the name of speeder as 'x' to stop.")
     print("# " * 13)
     ele = [input("Enter name of speeder: "),
@@ -42,9 +43,10 @@ def speeder(lst):
         lst.append(ele)
         print()
         print("# " * 13)
+        total += fine
         ele = [input("Enter name of speeder: "),
                num_checker("Enter the amount over speed limit: ")]
-    return lst
+    return lst, total
 
 
 def arrest(name):
@@ -65,7 +67,7 @@ def num_checker(question):
             print(error)
 
 
-def end_program(lst):
+def end_program(lst, totl):
     ...
 
 
