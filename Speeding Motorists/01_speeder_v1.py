@@ -6,6 +6,7 @@ Asks for the name, amount over limit and calculates the fine
 
 def speeder(lst):
     fine = 0
+    total = 0
     print("Input the name of speeder as 'x' to stop.")
     print("# " * 13)
     ele = [input("Enter name of speeder: "),
@@ -34,6 +35,7 @@ def speeder(lst):
         lst.append(ele)
         print()
         print("# " * 13)
+        total += fine
         ele = [input("Enter name of speeder: "),
                int(input("Enter the amount over speed limit: "))]
-    return lst
+    return lst, total
