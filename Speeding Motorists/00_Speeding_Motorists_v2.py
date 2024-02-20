@@ -1,5 +1,6 @@
 """
 Base component version 2
+Number checker component added
 Speeder function component and arrest component added
 """
 
@@ -54,7 +55,14 @@ def arrest(name):
 
 
 def num_checker(question):
-    ...
+    error = "\nSorry, you must enter an integer\n"
+    number = ""
+    while not number:
+        try:
+            number = int(input(question))
+            return number
+        except ValueError:
+            print(error)
 
 
 def end_program(lst):
